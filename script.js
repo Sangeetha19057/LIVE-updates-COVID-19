@@ -230,3 +230,26 @@ footer.append(para);
 document.querySelector("footer").append(footer);
 //-------- Header   Ends here------
 
+// loader script
+const loader_div = document.createElement("div");
+loader_div.setAttribute("class", "loader");
+const loader_image = document.createElement("img");
+loader_image.setAttribute(
+  "src",
+  "https://cdn.dribbble.com/users/948184/screenshots/10971368/818_covid_mask_db.gif"
+);
+loader_div.append(loader_image);
+document.querySelector(".page_loader").append(loader_div);
+
+const loader = document.querySelector(".loader");
+const main = document.querySelector(".main");
+
+function init() {
+  setTimeout(() => {
+    loader.style.opacity = 0;
+    loader.style.display = "none";
+    main.style.display = "block";
+    setTimeout(() => (main.style.opacity = 1), 50);
+  }, 5000);
+}
+init();
