@@ -203,6 +203,37 @@ footer p {
   text-align: center;
 }
 /* Footer styles  Ends*/
+
+
+/* loader styles */
+.main {
+  opacity: 0;
+  display: none;
+  transition: opacity 1s ease-in;
+}
+/*========= loader1 Starts======== */
+.loader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(209 195 233);
+}
+.loader img {
+  width: 320px;
+}
+@media (max-width: 425px) {
+  .loader img {
+    width: 280px;
+  }
+}
+/*========= loader1 Ends======== */
+
 /* For large devices */
 @media (max-width: 1200px) {
   .banner-conatiner {
